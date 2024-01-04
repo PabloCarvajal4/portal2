@@ -1,0 +1,354 @@
+<body>
+    <div>       
+    <ul class="menu" *ngIf="documentoSubido"><br><br>
+        <li class="centrar"><img class="perfil" [src]="documentoSubido" onerror="this.src='assets\\Design\\usuario-3.png'" alt=""></li>
+        <li><h5 class="nombre">
+            <div *ngIf="colaboradorSeleccionado">
+                {{ colaboradorSeleccionado.nombre }}
+              </div>           
+            </h5></li>
+        <li><h5 class="subtitulo">{{colaboradorSeleccionado.departamento}}<br>{{colaboradorSeleccionado.descriP_CENTRO_COSTO}}</h5></li>
+<div *ngIf="!colaboradorSeleccionado">
+                <p>Colaborador no encontrado.</p>
+              </div>
+              
+            <li class="menu ">
+            <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/home-ddhh', colaboradorSeleccionado.nO_EMPLE]" *ngIf="depto"><img class="icon" src="assets\Design\work-from-home.png">&nbsp;Página Principal</a></h6>
+            </li>
+        <li class="menu ">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/comprobante-pago', colaboradorSeleccionado.nO_EMPLE]"> <img  class="icon" src="assets\Design\comprobacion.png">&nbsp;Comprobante de Pago</a></h6>
+        </li>
+        <li class="menu nav-item my-1 disabled ">
+          <a href="#consultas" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buscar.png">&nbsp;Consultas &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="consultas" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Consulta de Solicitudes</a></h6>
+            </li>
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Consulta de Vacaciones</a></h6>
+            </li>
+            </ul>
+        </li>
+        <li class="menu nav-item my-1 disabled ">
+          <a href="#solicitudes" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\aprobacion.png">&nbsp;Solicitudes &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="solicitudes" data-bs-parent="#menu">
+            <li class="menu nav-item transparente">
+              <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-permisos', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitud de Permisos</a></h6>
+          </li>
+          <li class="menu nav-item transparente">
+            <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitud de Vacaciones</a></h6>
+        </li>
+        <li class="menu nav-item transparente">
+          <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitudes Respondidas</a></h6>
+      </li>
+            </ul>
+        </li>
+        <li class="menu nav-item my-1 disabled ">
+          <a href="#incapacidades" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\resfriado.png">&nbsp;Incapacidades &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="incapacidades" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Registrar Incapacidad</a></h6>
+            </li>
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades-registradas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Ver Incapacidades Registradas</a></h6>
+            </li>
+            </ul>
+        </li>
+        <li class="menu nav-item my-1 disabled ">
+          <a href="#constancias" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\papel.png">&nbsp;Constancias &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="constancias" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Generar Constancia</a></h6>
+            </li>
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias-generadas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Constancias Generadas</a></h6>
+            </li>
+            </ul>
+        </li>
+        <li class="menu " *ngIf="depto">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+        </li>
+        <li class="menu nav-item my-1 disabled ">
+          <a href="#denuncias" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\denunciante.png">&nbsp;Denuncia Código de Ética o Acoso&nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="denuncias" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncia', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Registrar Denuncia</a></h6>
+            </li>
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncias-registradas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Ver Denuncias Registradas</a></h6>
+            </li>
+            </ul>
+        </li>
+        <li class="menu nav-item my-1 disabled ">
+          <a href="#sugerencias" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buzon.png">&nbsp;Buzón de Sugerencias &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="sugerencias" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Registrar Sugerencia</a></h6>
+            </li>
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/sugerencias-recibidas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Ver Sugerencias Registradas</a></h6>
+            </li>
+            </ul>
+        </li>
+        <li class="menu " *ngIf="!depto">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\buzon.png">&nbsp;Buzón de Sugerencias</a></h6>
+        </li>
+        <li class="menu nav-item my-1 disabled " *ngIf="esAdmin">
+          <a href="#mensaje" data-bs-toggle="collapse" class="nav-link">
+            <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\chat.png" >&nbsp;Enviar Mensaje &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+          </a>
+            <ul class="nav collapse ms-4" id="mensaje" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" data-bs-toggle="modal" data-bs-target="#general" aria-current="page"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Mensaje General&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></h6>
+              </li>
+            <li class="menu nav-item">
+              <h6 class="margen"><a class="nav-link active menu" data-bs-toggle="modal" data-bs-target="#ddhh" aria-current="page"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Mensaje solo a DDHH</a></h6>
+          </li>
+          <li class="menu nav-item">
+            <h6 class="margen"><a class="nav-link active menu" data-bs-toggle="modal" data-bs-target="#especifico" aria-current="page"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Mensaje Específico</a></h6>
+        </li>
+          </ul>
+        </li>
+        <li class="menu ">
+          <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/dashboards', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\panel.png">&nbsp;Dashboard Analítica</a></h6>
+      </li>
+      </ul>
+    </div>
+
+  <div>
+        <table>
+            <tr class="altura">
+                <td>
+                    <div class="dropdown">
+                        <button class="derecha" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="logo" src="assets\Design\opciones.png">
+                        </button>
+
+                        <button class="btn btn-primary position-relative cumpleanios" type="button" data-bs-toggle="offcanvas" data-bs-placement="bottom" title="Cumpleañeros del Día" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img class="logo" src="assets\Design\calendario.png" alt="" >
+                        <span class="position-absolute top-4 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                          <span class="visually-hidden">New alerts</span>
+                        </span>
+                      </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" *ngIf="colaboradorSeleccionado">
+                          <li><a class="dropdown-item" [routerLink]="['/cambiar-foto', colaboradorSeleccionado.nO_EMPLE]">Subir o Actualizar Fotografía</a></li>
+                          <li><a [routerLink]="['/cambio-password', colaboradorSeleccionado.nO_EMPLE]" class="dropdown-item"  >Cambiar Contraseña</a></li>
+                          <li *ngIf="depto"><a [routerLink]="['/restablecer-contrasena', colaboradorSeleccionado.nO_EMPLE]" class="dropdown-item"  >Restablecer Contraseña a Colaboradores</a></li>
+                          <li><hr></li>
+                          <li><a (click)="cerrarSesion()" class="dropdown-item" aria-current="page" href="#">Cerrar Cesión</a></li>
+                          
+                        </ul>
+                      </div>
+            </td>
+            </tr>
+        </table>
+
+        <table class="clima">
+          <tr class="clima">
+            <th style="width: 90%;"><h6 class="clima">HN San Pedro Sula: {{SanPedroSula}} | {{spsTemperatura}}°C - ES Madrid: {{Madrid}} | {{madridTemperatura}}°C - CR Alajuela: {{Alajuela}} | {{alajuelaTemperatura}}°C</h6></th>
+            <th style="width: 10%; text-align: center;"><img class="cumpleanios" src="assets\Design\clima.png" width="30px" height="30px"></th>
+          </tr>
+        </table>
+        <br>
+        <div class="container-imagen">
+          <img class="derecha" src="assets\Design\principal.jpeg">
+    </div>
+    </div>
+
+<div class="modal fade" id="general" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <form [formGroup]="correoGeneralForm" (ngSubmit)="enviarCorreoGeneral()" enctype="multipart/form-data">
+  <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+              <h4>Envío de Correo Electrónico General</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      <div class="modal-body">
+          <label for="exampleFormControlInput1" class="form-label correo">Para:</label>
+          <input type="email" id="destinatarios" formControlName="destinatarios" class="form-control correo" multiple>
+          <br>
+          <label for="exampleFormControlInput1" class="form-label correo">Asunto:</label>
+          <input type="text" id="asunto" formControlName="asunto" type="text" class="form-control correo" placeholder="...">
+          <br>
+          <label for="floatingTextarea">Cuerpo</label>
+          <textarea class="form-control" id="cuerpo" formControlName="cuerpo"></textarea>
+          <div class="mb-3">
+          <label for="formFileSm" class="form-label">Cargar Archivo:</label>
+          <input class="form-control form-control-sm" type="file" id="archivoAdjunto" (change)="handleFileInput($event)">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+     
+    </div>
+  </div>
+  </form>
+</div>
+
+<div class="modal fade" id="ddhh" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form [formGroup]="correoForm" (ngSubmit)="enviarCorreoDDHH()" enctype="multipart/form-data">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <div class="modal-header">
+                <h4>Envío de Correo Electrónico DDHH</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+        <div class="modal-body">
+            <label for="exampleFormControlInput1" class="form-label correo">Para:</label>
+            <input type="email" id="destinatarios" formControlName="destinatarios" class="form-control correo" multiple>
+            <br>
+            <label for="exampleFormControlInput1" class="form-label correo">Asunto:</label>
+            <input type="text" id="asunto" formControlName="asunto" type="text" class="form-control correo" placeholder="...">
+            <br>
+            <label for="floatingTextarea">Cuerpo</label>
+            <textarea class="form-control" id="cuerpo" formControlName="cuerpo"></textarea>
+            <div class="mb-3">
+            <label for="formFileSm" class="form-label">Cargar Archivo:</label>
+            <input class="form-control form-control-sm" type="file" id="archivoAdjunto" (change)="handleFileInput($event)">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+       
+      </div>
+    </div>
+    </form>
+  </div>
+
+  <div class="modal fade" id="especifico" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <div class="modal-header">
+                <h4>Envío al Correo</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+        <div class="modal-body">
+            <label for="exampleFormControlInput1" class="form-label correo">Para:</label>
+            <input id="destinatarios" name="destinatarios" [(ngModel)]="destinatarios" type="email" class="form-control correo" id="exampleFormControlInput1" placeholder="name@ladylee.com">
+
+            <br>
+            <label for="exampleFormControlInput1" class="form-label correo">Asunto:</label>
+            <input id="asunto" name="asunto" [(ngModel)]="asunto" type="text" class="form-control correo" id="exampleFormControlInput1" placeholder="...">
+            <br>
+            <label for="exampleFormControlInput1" class="form-label correo">Cuerpo:</label>
+            <input id="cuerpo" name="cuerpo" [(ngModel)]="cuerpo" type="text" class="form-control correo" id="exampleFormControlInput1" placeholder="">
+            <div class="mb-3">
+            <label for="formFileSm" class="form-label">Cargar Archivo:</label>
+            <input class="form-control form-control-sm" id="formFileSm" type="file" id="archivoAdjunto" name="archivoAdjunto" (change)="onFileSelected($event)">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" (click)="enviarCorreoEspecifico()">Enviar</button>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" >
+    <div class="offcanvas-header">
+      <h4 class="offcanvas-title" id="offcanvasRightLabel">¡Muchas Felicidades a los Cumpleañeros de Hoy!</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" #tableContainer>
+      <div class="table-container" >
+      <table class="cumpleanios">
+        <thead>
+          <tr>
+            <th style="width: 271px;">NOMBRE DEL COLABORADOR</th>
+            <th style="width: 188px;">PUESTO</th>
+            <th style="width: 180px;">CENTRO DE COSTO</th>
+            <th style="width: 20px;">DÍA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cumpleanerosSeleccionado of listCumpleaneros">
+            <td>{{cumpleanerosSeleccionado.nombre}}</td>
+            <td>{{cumpleanerosSeleccionado.cargo}}</td>
+            <td>{{cumpleanerosSeleccionado.centrO_COSTO}}</td>
+            <td>{{diaDelMes}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h6 class="cumple" *ngIf="listCumpleaneros.length == 0">No hay Cumpleañeros el Día de Hoy</h6> 
+      </div> 
+    </div>
+    <button class="btn btn-primary enviar" (click)="convertirImagen(2)"><img src="https://i.postimg.cc/2j1N6R68/enviar-mensaje-1.png" alt="" width="30px" height="30px"><br>Enviar al Correo</button>
+
+    <div class="custom-time-input">
+      <input type="time" [(ngModel)]="horaYMinutos"/>
+      <p class="hora">Programar Horario</p>
+    </div>
+    <button class="btn btn-primary automatico" [ngClass]="{'rojo': !activado, 'verde': activado}" (click)="toggleEstado(); convertirImagen(1)">
+      <img [src]="activado ? 'https://i.postimg.cc/FKfG7H7v/cheque.png' : 'https://i.postimg.cc/vBqKCNg8/cancelar.png'" alt="" width="30px" height="30px">
+      <br>Envío Automático<br>{{ activado ? 'Activado' : 'Desactivado' }}
+    </button>
+  </div>
+
+  <div class="modal-overlay">
+    <div class="balloons-container">
+    </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body background">
+          <button type="button" class="btn-close" (click)="closeModalCumpleanio()"></button>
+          <table class="cumpleanioPersonal">
+            <thead>
+              <tr *ngIf="colaboradorSeleccionado">
+                <th>{{colaboradorSeleccionado.nombre}}</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay-aniversario">
+    <div class="balloons-container">
+    </div>
+  </div>
+
+  <div class="modal fade" id="aniversario" tabindex="-1" aria-labelledby="aniversarioLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <button type="button" class="btn-close" (click)="closeModalAniversario()"></button>
+      <div class="modal-content">
+        <div class="modal-body background-aniversario">
+          <h5 class="num">{{ AniosAniversario }}</h5>
+          <table class="aniversario">
+            <thead>
+              <tr>
+                <th>
+                  {{ AniosAniversario === 1 ? 'AÑO' : 'AÑOS' }}
+                </th>
+              </tr>
+              <br>
+              <tr *ngIf="colaboradorSeleccionado">
+                <th class="letra">{{ colaboradorSeleccionado.nombre }}</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+</body>

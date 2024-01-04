@@ -1,0 +1,262 @@
+@media only screen and (min-width: 1700px) {
+  ul.menu {
+    width: 18% !important;
+    height: 100% !important;
+  }
+  
+  li.menu a.menu {
+    font-size: 20px !important;
+    padding: 10px 16px !important;
+  }
+  
+  h5.subtitulo{
+    font-size: 20px !important;
+  }
+  
+  li.centrar{
+    margin-top: 10% !important;
+  }
+  h5.nombre{
+    font-size: 22px !important;
+    margin-top: 2% !important;
+  }
+  img.perfil{
+    width: 180px !important;
+    height: 180px !important;
+  }
+  div.formulario{
+    margin-left: 17% !important;
+  }
+  .error-message {
+    margin-right: 20% !important;
+  }
+  .filtro-container {
+    margin-left: 35% !important;
+  }
+
+  h6{
+    font-size: 18px !important;
+  }
+  select.form-select{
+    font-size: 18px !important;
+  }
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background: linear-gradient(90deg, #003663, #3fadde);
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+ul.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul.menu::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+ul.menu::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+ul.menu::-webkit-scrollbar:horizontal {
+  height: 100%;
+}
+
+ul.menu::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 20px;
+  border: none;
+}
+
+ul.menu::-webkit-scrollbar-track {
+  border-radius: 5px;  
+}
+
+h6.menu{
+  text-align: left;
+  color:rgb(255, 255, 255);
+}
+
+img.margen{
+  margin-bottom: 1%;
+}
+/* Estilo para opciones en modo horizontal */
+#sidemenu .nav-item {
+  display: block !important;
+}
+
+/* Estilo para opciones en modo vertical */
+#sidemenu .nav-item > h6 {
+  display: block !important;
+}
+h6.margen{
+  font-size: 15px;
+}
+
+li.menu a.menu {
+  font-size: 14px;
+  display: block;
+  color: white;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+li.menu a.active {
+  background-color: transparent;
+  color: white;
+}
+
+  li.centrar{
+    text-align: center;
+    float: center;
+  }
+  ul.menu li a:hover {
+    color: #000000; /* Cambia el color del texto al pasar el puntero */
+  }
+h1{
+    text-align: center;
+}
+h5{
+    text-align: center;
+    color:white;
+}
+  h6.center{
+    text-align: center;
+  }
+body{
+  background-color: #ffffff;
+}
+
+img.derecha{
+  float: right;
+}
+img.centrar{
+  float: center;
+}
+img.rechazar{
+  margin-left: 10px;
+}
+img.margen-izquierdo{
+  margin-left: 57%;
+  margin-top: 8%;
+}
+label{
+    float: left;
+    padding: 10px;
+  }
+
+  select{
+    margin-left: 1px;
+    width: 190px;
+    font-size: 14px;
+  }
+
+
+div.formulario{
+margin-left: 20%;
+}
+
+input.margen{
+    margin-left: 10px;
+  }
+
+  table.diseno{
+    text-align: center;
+    background-color: white;
+    margin-left:auto;margin-right:auto;
+    border: 1px solid rgb(202, 202, 202);
+}
+td.diseño, th.diseño {
+  height: 1cm;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  text-align: center;
+  }
+  tr.encabezado{
+    background-color: #f2f2f2; 
+  }
+
+  img.icon{
+    height: 24px;
+    width: 24px;
+  }
+  input.cod{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+  }
+textarea.cod{
+  background-color: transparent;
+  border: none;
+  text-align: center; 
+  color: #000000;
+}
+input.date{
+  background-color: transparent;
+  border: none;
+  text-align: center; 
+  color: #000000;
+  width: 69px;
+}
+
+img.perfil{
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+button.borde{
+  background: transparent;
+  border: none;
+}
+button.center{
+  margin-left: 35%;
+}
+
+.error-message {
+  color: red; /* Cambia el color del mensaje de error a rojo u otro color deseado */
+  font-size: 14px; /* Ajusta el tamaño de fuente del mensaje de error */
+  margin-top: 5px; /* Agrega un margen superior para separar el mensaje del botón */
+  text-align: right;
+  margin-right: 8%;
+}
+
+img.icono{
+  float: right;
+  transition: all 0.3s;
+}
+img.icono:hover{
+  transform: scale(1.2);
+}
+
+.filtro-container {
+  margin-left: 15%;
+  display: flex;
+  align-items: center;
+}
+.filtro-container h6 {
+  margin-left: 1%;
+  margin-bottom: 0; 
+  margin-right: 10px; 
+}
+
+div.spinner-border{
+  margin-left: 50%;
+}
+
+h5.nombre{
+  font-size: 18px;
+  margin-top: 10px;
+}
+div.center{
+  text-align: center;
+}
+h5.subtitulo{
+  font-size: 16px;
+  margin-top: 10px;
+}

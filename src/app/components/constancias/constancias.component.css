@@ -1,0 +1,263 @@
+@media only screen and (min-width: 1700px) {
+  ul.menu {
+    width: 18% !important;
+    height: 100% !important;
+  }
+  
+  li.menu a.menu {
+    font-size: 20px !important;
+    padding: 10px 16px !important;
+  }
+  
+  h5.subtitulo{
+    font-size: 20px !important;
+  }
+  
+  li.centrar{
+    margin-top: 10% !important;
+  }
+  h5.nombre{
+    font-size: 22px !important;
+    margin-top: 2% !important;
+  }
+  img.perfil{
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  div.formulario{
+    margin-left: 17% !important;
+  }
+  div.dirigida{
+    margin-left: 5% !important;
+  }
+  input.constancias{
+    width: 11.5% !important;
+  }
+  label{
+    font-size: 18px !important;
+  }
+
+  button.visualizacion {
+    margin-right: 25% !important; 
+  }
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background: linear-gradient(90deg, #003663, #3fadde);
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+ul.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul.menu::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+ul.menu::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+ul.menu::-webkit-scrollbar:horizontal {
+  height: 100%;
+}
+
+ul.menu::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 20px;
+  border: none;
+}
+
+ul.menu::-webkit-scrollbar-track {
+  border-radius: 5px;  
+}
+
+h6.menu{
+  text-align: left;
+  color:rgb(255, 255, 255);
+}
+
+img.margen{
+  margin-bottom: 1%;
+}
+/* Estilo para opciones en modo horizontal */
+#sidemenu .nav-item {
+  display: block !important;
+}
+
+/* Estilo para opciones en modo vertical */
+#sidemenu .nav-item > h6 {
+  display: block !important;
+}
+h6.margen{
+  font-size: 15px;
+}
+
+li.menu a.menu {
+  font-size: 14px;
+  display: block;
+  color: white;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+li.menu a.active {
+  background-color: transparent;
+  color: white;
+}
+
+  li.centrar{
+    text-align: center;
+    float: center;
+  }
+  ul.menu li a:hover {
+    color: #000000; /* Cambia el color del texto al pasar el puntero */
+  }
+h1{
+    text-align: center;
+}
+h5{
+    text-align: center;
+    color:white;
+}
+  
+body{
+  background-color: #ffffff;
+}
+
+img.derecha{
+  float: right;
+}
+img.centrar{
+  float: center;
+}
+img.margen-izquierdo{
+  margin-left: 57%;
+  margin-top: 8%;
+}
+label{
+    float: left;
+    padding: 10px;
+  }
+
+  select{
+    margin-left: 1px;
+    width: 230px;
+    font-size: 14px;
+  }
+  select.largo{
+    margin-left: 1px;
+    width: 330px;
+    font-size: 14px;
+  }
+button.visualizacion {
+    background-color: #005395; 
+    border: none;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 15%; 
+  }
+
+  .visualizacion {background-color: #005395;} 
+  .visualizacion:hover {background: #004b88; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+
+div.formulario{
+margin-left: 20%;
+}
+div.dirigida{
+  margin-left: 5%;
+}
+input.margen{
+    margin-left: 10px;
+  }
+  input{
+    font-size: 14px;
+    width: 200px;
+  }
+  div.form{
+    margin-left: 5%;
+  }
+  .pdfview {
+    /* Centrado */
+    margin: auto;
+    display: block;
+    /* Tamaño */
+    width: 1150px;
+    height: 75vh;
+    /* Mejorar aspecto */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button.mensaje{
+  background-color: transparent;
+  border: 0px solid;
+  margin-right: 3%;
+  background-color: #005395; 
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 15px;
+}
+img.icon{
+  height: 24px;
+  width: 24px;
+}
+input.name{
+  font-size: 14px;
+  width: 250px;
+}
+input.password{
+  font-size: 14px;
+  width: 45px;
+}
+.times-new-roman {
+  font-family: 'Times New Roman', serif;
+}
+
+img.perfil{
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+input.titulo{
+  width: 400px;
+  background-color: transparent;
+  font-size: 20px;
+  align-items: left;
+}
+input.height{
+  height: 40px;
+}
+input.correo{
+  margin-left: 15%;
+}
+
+button.derecha{
+  float: right;
+}
+h5.nombre{
+  font-size: 18px;
+  margin-top: 10px;
+}
+h5.subtitulo{
+  font-size: 16px;
+  margin-top: 10px;
+}
+input.constancias{
+  width: 22.5%;
+}

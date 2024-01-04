@@ -1,0 +1,216 @@
+@media only screen and (min-width: 1700px) {
+  ul.menu {
+    width: 18% !important;
+    height: 100% !important;
+  }
+  
+  li.menu a.menu {
+    font-size: 20px !important;
+    padding: 10px 16px !important;
+  }
+  
+  h5.subtitulo{
+    font-size: 20px !important;
+  }
+  
+  li.centrar{
+    margin-top: 10% !important;
+  }
+  h5.nombre{
+    font-size: 22px !important;
+    margin-top: 2% !important;
+  }
+  img.perfil{
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  label{
+    font-size: 18px !important;
+  }
+  button {
+    margin-right: 30% !important; 
+  }
+  div.formulario{
+    margin-left: 11% !important;
+  }
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background: linear-gradient(90deg, #003663, #3fadde);
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+ul.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul.menu::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+ul.menu::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+ul.menu::-webkit-scrollbar:horizontal {
+  height: 100%;
+}
+
+ul.menu::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 20px;
+  border: none;
+}
+
+ul.menu::-webkit-scrollbar-track {
+  border-radius: 5px;  
+}
+
+h6.menu{
+  text-align: left;
+  color:rgb(255, 255, 255);
+}
+
+img.margen{
+  margin-bottom: 1%;
+}
+/* Estilo para opciones en modo horizontal */
+#sidemenu .nav-item {
+  display: block !important;
+}
+
+/* Estilo para opciones en modo vertical */
+#sidemenu .nav-item > h6 {
+  display: block !important;
+}
+h6.margen{
+  font-size: 15px;
+}
+
+li.menu a.menu {
+  font-size: 14px;
+  display: block;
+  color: white;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+li.menu a.active {
+  background-color: transparent;
+  color: white;
+}
+
+  li.centrar{
+    text-align: center;
+    float: center;
+  }
+  ul.menu li a:hover {
+    color: #000000; /* Cambia el color del texto al pasar el puntero */
+  }
+h1{
+    margin-left: 45%;
+}
+h5{
+    text-align: center;
+    color:white;
+}
+  
+body{
+  background-color: #ffffff;
+}
+
+label.contador{
+  float: left;
+  margin-left: 3%;
+  padding: 10px;
+}
+label.center{
+  margin-left: 4%;
+  font-size: 14px;
+  font-weight: 1000;
+}
+h6.categoria{
+  margin-left: 30%;
+}
+  select{
+    font-size: 14px;
+    width: 190px;
+  }
+button {
+    background-color: #005395; 
+    border: none;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 15%; 
+  }
+
+  button {background-color: #005395;} 
+  button:hover {background: #004b88; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+  
+div.formulario{
+
+}
+form.formu{
+  margin-left: 25%;
+}
+
+  textarea{
+    margin-left: 40px;
+    width: 830px;
+    height: 150px;
+    font-size: 14px;
+  }
+  button.mensaje{
+    background-color: transparent;
+    border: 0px solid;
+    margin-right: 3%;
+    background-color: #005395; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+  }
+  img.icon{
+    height: 24px;
+    width: 24px;
+  }
+  img.perfil{
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+  }
+
+  div.row{
+    width: 70%;
+    margin-left: 30%;
+  }
+  div.cardMarginTop{
+    margin-top: 5%;
+  }
+  a{
+    color: #000000;
+    text-decoration: none;
+  }
+
+  h5.nombre{
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  h5.subtitulo{
+    font-size: 16px;
+    margin-top: 10px;
+  }

@@ -1,0 +1,186 @@
+<body>
+    <div>       
+    <ul class="menu" *ngIf="documentoSubido"><br><br>
+        <li class="centrar"><img class="perfil" [src]="documentoSubido" onerror="this.src='assets\\Design\\usuario-3.png'" alt="" width="128" height="128"></li>
+        <li><h5 class="nombre">
+            <div *ngIf="colaboradorSeleccionado">
+                {{ colaboradorSeleccionado.nombre }}
+              </div>           
+            </h5></li>
+        <li><h5 class="subtitulo">{{colaboradorSeleccionado.departamento}}<br>{{colaboradorSeleccionado.descriP_CENTRO_COSTO}}</h5></li>
+<div *ngIf="!colaboradorSeleccionado">
+                <p>Colaborador no encontrado.</p>
+              </div>
+              <br>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home', colaboradorSeleccionado.nO_EMPLE]" *ngIf="!esAdmin"> <img class="icon" src="assets\Design\work-from-home.png" >&nbsp;Página Principal</a></h6>
+        </li>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home-admin', colaboradorSeleccionado.nO_EMPLE]" *ngIf="esAdmin"><img class="icon" src="assets\Design\work-from-home.png">&nbsp;Página Principal</a></h6>
+        </li>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/comprobante-pago', colaboradorSeleccionado.nO_EMPLE]"> <img  class="icon" src="assets\Design\comprobacion.png">&nbsp;Comprobante de Pago</a></h6>
+        </li>
+        <li class="menu nav-item my-1 disabled">
+            <a href="#consultas" data-bs-toggle="collapse" class="nav-link">
+              <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buscar.png">&nbsp;Consultas &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+            </a>
+              <ul class="nav collapse ms-4" id="consultas" data-bs-parent="#menu">
+                <li class="menu nav-item">
+                  <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Consulta de Solicitudes</a></h6>
+              </li>
+                <li class="menu nav-item">
+                  <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Consulta de Vacaciones</a></h6>
+              </li>
+              </ul>
+          </li>
+          <li class="menu nav-item my-1 disabled">
+            <a href="#solicitudes" data-bs-toggle="collapse" class="nav-link">
+              <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\aprobacion.png">&nbsp;Solicitudes &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+            </a>
+              <ul class="nav collapse ms-4" id="solicitudes" data-bs-parent="#menu">
+              <li class="menu nav-item">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-permisos', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitud de Permisos</a></h6>
+            </li>
+            <li class="menu nav-item">
+              <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitud de Vacaciones</a></h6>
+          </li>
+              </ul>
+          </li>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\resfriado.png">&nbsp;Incapacidades</a></h6>
+        </li>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page"  [routerLink]="['/constancias', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\papel.png">&nbsp;Constancias</a></h6>
+        </li>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page"  [routerLink]="['/denuncia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\denunciante.png">&nbsp;Denuncia Codigo de Ética o Acoso</a></h6>
+        </li>
+        <li class="menu">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\buzon.png">&nbsp;Buzón de Sugerencias</a></h6>
+        </li>
+      </ul>
+    </div>
+
+  <div>
+        <table>
+            <tr class="altura">
+                <td>
+                    <div class="dropdown">
+
+                        <button class="derecha" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="logo" src="assets\Design\opciones.png" height="35px" width="35px">
+                        </button>
+
+                        <button class="btn btn-primary position-relative cumpleanios" type="button" data-bs-toggle="offcanvas" data-bs-placement="bottom" title="Cumpleañeros del Día" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                          <img class="logo" src="assets\Design\calendario.png" alt="" height="33px" width="33px">
+                          <span class="position-absolute top-4 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                          </span>
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" *ngIf="colaboradorSeleccionado">
+                          <li><a class="dropdown-item" [routerLink]="['/cambiar-foto', colaboradorSeleccionado.nO_EMPLE]">Subir o Actualizar Fotografía</a></li>
+                          <li><a [routerLink]="['/cambio-password', colaboradorSeleccionado.nO_EMPLE]" class="dropdown-item"  >Cambiar Contraseña</a></li>
+                          <li><hr></li>
+                          <li><a (click)="cerrarSesion()" class="dropdown-item" aria-current="page" href="#">Cerrar Cesión</a></li>
+                          
+                        </ul>
+                      </div>
+            </td>
+            </tr>
+        </table>
+        
+        <table class="clima">
+          <tr class="clima">
+            <th style="width: 90%;"><h6 class="clima">HN San Pedro Sula: {{SanPedroSula}} | {{spsTemperatura}}°C - ES Madrid: {{Madrid}} | {{madridTemperatura}}°C - CR Alajuela: {{Alajuela}} | {{alajuelaTemperatura}}°C</h6></th>
+            <th style="width: 10%; text-align: center;"><img class="cumpleanios" src="assets\Design\clima.png" width="30px" height="30px"></th>
+          </tr>
+        </table>
+        <br>
+        <div class="container-imagen">
+          <img class="derecha" src="assets\Design\principal.jpeg">
+    </div>
+    </div>
+
+<div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvasRightLabel">¡Muchas Felicidades a los Cumpleañeros de Hoy!</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="table-container">
+    <table class="cumpleanios">
+      <thead>
+        <tr>
+          <th style="width: 271px;">NOMBRE DEL COLABORADOR</th>
+          <th style="width: 188px;">PUESTO</th>
+          <th style="width: 180px;">CENTRO DE COSTO</th>
+          <th style="width: 20px;">DÍA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cumpleanerosSeleccionado of listCumpleaneros">
+          <td>{{cumpleanerosSeleccionado.nombre}}</td>
+          <td>{{ cumpleanerosSeleccionado.cargo }}</td>                 
+          <td>{{cumpleanerosSeleccionado.centrO_COSTO}}</td>
+          <td>{{diaDelMes}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h6 class="cumple" *ngIf="listCumpleaneros.length == 0">No hay Cumpleañeros el Día de Hoy</h6> 
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay">
+  <div class="balloons-container">
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body background">
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+        <table class="cumpleanioPersonal">
+          <thead>
+            <tr *ngIf="colaboradorSeleccionado">
+              <th>{{colaboradorSeleccionado.nombre}}</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay-aniversario">
+  <div class="balloons-container">
+  </div>
+</div>
+
+<div class="modal fade" id="aniversario" tabindex="-1" aria-labelledby="aniversarioLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <button type="button" class="btn-close" (click)="closeModalAniversario()"></button>
+    <div class="modal-content">
+      <div class="modal-body background-aniversario">
+        <h5 class="num">{{ AniosAniversario }}</h5>
+        <table class="aniversario">
+          <thead>
+            <tr>
+              <th>
+                {{ AniosAniversario === 1 ? 'AÑO' : 'AÑOS' }}
+              </th>
+            </tr>
+            <br>
+            <tr *ngIf="colaboradorSeleccionado">
+              <th class="letra">{{ colaboradorSeleccionado.nombre }}</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>  
+</body>

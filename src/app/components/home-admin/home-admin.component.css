@@ -1,0 +1,537 @@
+@media only screen and (min-width: 1700px) {
+  ul.menu {
+    width: 18% !important;
+    height: 100% !important;
+  }
+  
+  li.menu a.menu {
+    font-size: 20px !important;
+    padding: 10px 16px !important;
+  }
+  
+  h5.subtitulo{
+    font-size: 20px !important;
+  }
+  
+  li.centrar{
+    margin-top: 10% !important;
+  }
+  h5.nombre{
+    font-size: 22px !important;
+    margin-top: 2% !important;
+  }
+  img.perfil{
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  tr.altura{
+    height: 100px !important;
+  }
+
+  h6.margen{
+    margin-top: 1% !important;
+  }
+
+  .table-container {
+    margin-top: 20% !important;
+    margin-left: 20% !important;
+    height:52% !important;
+    width:62% !important;
+  }
+  
+  table.cumpleanios{
+    width:100% !important;
+    font-size: 22px !important;
+  }
+  h6.cumple{
+    margin-top: 5% !important;
+  }
+  img.derecha{
+    width: 82% !important;
+   }
+ 
+ table{
+   width: 82% !important;
+ }
+   table.clima {
+    width: 82% !important;
+ }
+  tr.clima {
+      height: 100px !important;
+  }
+  
+  h6.clima {
+      font-size: 28px !important;
+  }
+
+  img.cumpleanios{
+    width: 60px;
+    height: 60px;
+  }
+  img.logo{
+    width: 45px !important;
+    height: 45px !important;
+  }
+  img.icon{
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  a.dropdown-item{
+    font-size: 18px !important;
+  }
+  table.cumpleanioPersonal{
+    width: 49% !important;
+  }
+  div.container-imagen{
+    width: 100vw !important;
+    height: 47vw !important;
+  } 
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background: linear-gradient(90deg, #003663, #3fadde);
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+ul.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul.menu::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+ul.menu::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+ul.menu::-webkit-scrollbar:horizontal {
+  height: 100%;
+}
+
+ul.menu::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 20px;
+  border: none;
+}
+
+ul.menu::-webkit-scrollbar-track {
+  border-radius: 5px;  
+}
+
+h6.menu{
+  text-align: left;
+  color:rgb(255, 255, 255);
+}
+
+img.margen{
+  margin-bottom: 1%;
+}
+/* Estilo para opciones en modo horizontal */
+#sidemenu .nav-item {
+  display: block !important;
+}
+
+/* Estilo para opciones en modo vertical */
+#sidemenu .nav-item > h6 {
+  display: block !important;
+}
+h6.margen{
+  font-size: 15px;
+}
+
+.dropdown-menu{
+  float: right;
+  margin-right: 15%;
+  text-align: left;
+  position: absolute;
+  }
+
+  li.menu a.menu {
+    font-size: 14px;
+    display: block;
+    color: white;
+    padding: 3px 16px;
+    text-decoration: none;
+  }
+  
+  li.margen{
+    margin-top: 5%;
+  }
+  li.menu a.active {
+    background-color: transparent;
+    color: white;
+  }
+  
+  li.centrar{
+    text-align: center;
+    float: center;
+  }
+  
+  ul.menu li a:hover {
+    color: #000000; /* Cambia el color del texto al pasar el puntero */
+  }
+  ul.menu .dropdown-toggle:hover {
+    color: #000000; /* Cambia el color del texto al pasar el puntero */
+  }
+  
+  h1{
+    text-align: center;
+  }
+  h5{
+    text-align: center;
+    color:white;
+  }
+  h6{
+    text-align: left;
+    color:rgb(0, 0, 0);
+    
+  }
+  
+  body{
+  background-color: #D8E2ED;
+  }
+  
+  div.container-imagen{
+    float: right;
+    width: 80vw;
+    height: 40vw;
+  }
+  img.derecha{
+    float: right;
+    width: 100%;
+    height: 100%;
+  }
+    img.logo{
+      margin-top: 20%;
+      float: right;
+      transition: all 0.3s;
+      width: 35px;
+      height: 35px;
+    }
+
+  img.logo{
+    float: right;
+    transition: all 0.3s;
+  }
+  img.logo:hover{
+    transform: scale(1.2);
+  }
+  
+  img.centrar{
+  float: center;
+  }
+  img.margen-izquierdo{
+  margin-left: 57%;
+  margin-top: 5%;
+  }
+  
+  table{
+  background-color: #3fadde;
+  float: right;
+  width: 80vw;
+  }
+  
+  img.margen-derecho{
+  margin-right: 1%;
+  }
+img.icon{
+  height: 24px;
+  width: 24px;
+}
+  
+  ul.derecha{
+  float: right;
+  }
+  ul.margen-derecho{
+  margin-right: 1%;
+  }
+  
+  tr.altura{
+  height: 50px;
+  }
+  
+  table.clima {
+    width: 80vw;
+}
+
+tr.clima {
+    background-color: #f0f1f3;
+    height: 50px;
+}
+
+th.clima{
+  width: 10%;
+}
+h6.clima {
+    text-align: center;
+    margin-top: 1%;
+    color: #00115e;
+}
+
+  .dropdown-menu{
+  float: right;
+  margin-right: 15%;
+  text-align: left;
+  position: absolute;
+  }
+  
+  button.derecha{
+    float: center;
+    background-color: transparent;
+    border: 0px solid;
+    margin-right: 3%;
+  }
+  
+  button.mensaje {
+    background-color: #005395; 
+    border: none;
+    color: white;
+    text-align: center;
+    margin-top:2%;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 420px; 
+  }
+  
+  button{
+    float: right;
+  }
+  
+  button.flecha{
+    background-color: transparent;
+    border: 0px solid;
+    margin-right: 3%;
+    background-color: #005395; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 420px; 
+    margin-left: 100px;
+  }
+  button.modal{
+    background-color: #005395; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 420px; 
+    margin-left: 400px;
+  }
+  button.mensaje{
+    background-color: transparent;
+    border: 0px solid;
+    margin-right: 3%;
+    background-color: #005395; 
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+  img.perfil{
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+  }
+
+  .custom-offcanvas {
+    width: 73%; 
+  }
+  
+  .offcanvas-body {
+    background-image: url('../../../assets/Design/cumpleGeneral.png'); 
+    background-size: 75%;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  
+  .table-container {
+    text-align: center;
+    overflow: scroll;
+    margin-top: 12%;
+    margin-left: 19%;
+    height:66%;
+    width:63%;
+    text-align: center;
+    background-color: #ecebeb;
+  }
+  
+  div.table-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  div.table-container::-webkit-scrollbar:vertical {
+    width:5px;
+  }
+  
+  div.table-container::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+  } 
+  
+  div.table-container::-webkit-scrollbar:horizontal {
+    height: 100%;
+  }
+  
+  div.table-container::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: none;
+  }
+  div.table-container::-webkit-scrollbar-track {
+    border-radius: 5px;  
+  }
+  
+  table.cumpleanios{
+    background-color: #ecebeb;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .cumpleanios th{
+    border: 1px solid white;
+    padding: 8px; 
+    font-weight: bold;
+  }
+  
+  .cumpleanios td {
+    border: 1px solid white;
+    padding: 8px; 
+  }
+
+  button.cumpleanios{
+    float: center;
+    background-color: transparent;
+    border: 0px solid;
+    margin-right: 2%;
+  }
+
+  img.cumpleanios {
+    animation: rotateAnimation 1.5s ease-in-out infinite; /* Rotación automática cada 2 segundos */
+  }
+  
+  @keyframes rotateAnimation {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+
+  .modal-backdrop.custom-backdrop {
+    background-color: rgba(221, 221, 221, 0.5); /* Fondo oscuro con opacidad */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050; /* Ajusta el z-index según sea necesario */
+  }
+  
+  div.background {
+    background-image: url('../../../assets/Design/FelicitacionCumpleanios.jpg'); 
+    background-size: 90%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 590px;
+  }
+  
+  table.cumpleanioPersonal{
+    background-color: #ffffff;
+    width: 47.5%;
+    height: 5%;
+    text-align: center;
+    margin-right: 10%;
+    margin-top: 30%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00345f;
+  }
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999;
+  overflow: hidden; 
+  background-image: url('../../../assets/Design/Backdrop-BD.png'); 
+}
+
+div.background-aniversario {
+  background-image: url('../../../assets/Design/aniversario.jpg'); 
+  background-size: 95%;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 610px;
+}
+.modal-overlay-aniversario {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
+}
+
+table.aniversario{
+  background-color: transparent;
+  width: 380px;
+  height: 30px;
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 7%;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+h5.num{
+  margin-top: 25%;
+  font-size: 140px;
+  color: rgb(187, 140, 22);
+}
+h6.cumple{
+  color: #000000;
+  text-align: center;
+}
+th.letra{
+  font-size: 16px;
+}
+h5.nombre{
+  font-size: 18px;
+  margin-top: 10px;
+}
+img.clima{
+  margin-left: 95%;
+ }
+ p.clima{
+   font-size: 12px;
+   margin-left: 85%;
+   margin-right: 1%;
+   line-height: 0;
+   text-align: right;
+   color: #00115e;
+ }
+ h5.subtitulo{
+  font-size: 16px;
+  margin-top: 10px;
+}

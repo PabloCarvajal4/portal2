@@ -1,0 +1,314 @@
+@media only screen and (min-width: 1700px) {
+  ul.menu {
+    width: 18% !important;
+    height: 100% !important;
+  }
+  
+  li.menu a.menu {
+    font-size: 20px !important;
+    padding: 10px 16px !important;
+  }
+  
+  h5.subtitulo{
+    font-size: 20px !important;
+  }
+  
+  li.centrar{
+    margin-top: 10% !important;
+  }
+  h1{
+    margin-right: 30%;
+}
+  h5.nombre{
+    font-size: 22px !important;
+    margin-top: 2% !important;
+  }
+  img.perfil{
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  div.formulario{
+    margin-left: 30% !important;
+    }
+  div.colaborador{
+      margin-left: 5% !important;
+    }
+  label{
+    font-size: 18px !important;
+    margin-left: 15% !important;
+    }
+
+  label.colaborador{ 
+    font-size: 18px !important;
+    }
+  input.name{
+    font-size: 16px !important;
+    width: 30% !important;
+    }
+  input.form-control{
+    font-size: 16px !important;
+  }
+  table.diseno{
+    font-size: 18px !important;
+    margin-left:15% !important;
+}
+  div.center{
+  margin-left: 10% !important;
+}
+div.tabla{
+  width:950px !important;
+}
+}
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background: linear-gradient(90deg, #003663, #3fadde);
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+ul.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul.menu::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+ul.menu::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+ul.menu::-webkit-scrollbar:horizontal {
+  height: 100%;
+}
+
+ul.menu::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 20px;
+  border: none;
+}
+
+ul.menu::-webkit-scrollbar-track {
+  border-radius: 5px;  
+}
+
+h6.menu{
+  text-align: left;
+  color:rgb(255, 255, 255);
+}
+
+img.margen{
+  margin-bottom: 1%;
+}
+/* Estilo para opciones en modo horizontal */
+#sidemenu .nav-item {
+  display: block !important;
+}
+
+/* Estilo para opciones en modo vertical */
+#sidemenu .nav-item > h6 {
+  display: block !important;
+}
+h6.margen{
+  font-size: 15px;
+}
+
+li.menu a.menu {
+  font-size: 14px;
+  display: block;
+  color: white;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+li.menu a.active {
+  background-color: transparent;
+  color: white;
+}
+
+  li.centrar{
+    text-align: center;
+    float: center;
+  }
+  ul.menu li a:hover {
+    color: #000000; /* Cambia el color del texto al pasar el puntero */
+  }
+h1{
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+    color:white;
+}
+  
+body{
+  background-color: #ffffff;
+}
+
+img.derecha{
+  float: right;
+}
+img.centrar{
+  float: center;
+}
+img.margen-izquierdo{
+  margin-left: 57%;
+  margin-top: 8%;
+}
+img.logo{
+  float: right;
+  transition: all 0.3s;
+}
+img.logo:hover{
+  transform: scale(1.2);
+}
+label{
+    float: center;
+    padding: 10px;
+    margin-left: 6%;
+  }
+
+  select{
+    margin-left: 1px;
+    width: 190px;
+  }
+  
+button.buscar {
+    background-color: #005395; 
+    border: none;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    float: right;
+    margin-right: 300px; 
+  }
+
+  button.derecha{
+    float: center;
+    background-color: transparent;
+    border: 0px solid;
+    margin-right: 3%;
+  }
+
+div.formulario{
+margin-left: 25%;
+}
+
+div.colaborador{
+  margin-left: 15%;
+}
+input.margen{
+    margin-left: 10px;
+  }
+
+  table.diseno{
+    text-align: center;
+    background-color: white;
+    border: #b2b2b2 1px solid;
+    margin-left:7%;
+    overflow: scroll;
+    height:130px;
+    width:800px;
+}
+td.diseño, th.diseño {
+    border: black 1px solid;
+  }
+  tr.encabezado{
+    background-color: #f2f2f2;
+    
+  }
+  div.tabla{
+    overflow: scroll;
+    height:440px;
+    width:870px;
+  }
+  div.tabla::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  div.tabla::-webkit-scrollbar:vertical {
+    width:5px;
+  }
+  
+  div.tabla::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+  } 
+  
+  div.tabla::-webkit-scrollbar:horizontal {
+    height: 100%;
+  }
+  
+  div.tabla::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  div.tabla::-webkit-scrollbar-track {
+    border-radius: 5px;  
+  }
+  input{
+    font-size: 14px;
+  }
+  input.name{
+    font-size: 12px;
+    width: 40%;
+    text-align: center;
+  }
+  .pdfview {
+    /* Centrado */
+    margin: auto;
+    display: block;
+    /* Tamaño */
+    width: 1100px;
+    height: 75vh;
+    /* Mejorar aspecto */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+button.mensaje{
+  background-color: transparent;
+  border: 0px solid;
+  margin-right: 3%;
+  background-color: #005395; 
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 15px;
+}
+img.icon{
+  height: 24px;
+  width: 24px;
+}
+input.date{
+  background-color: transparent;
+  border: none;
+  width: 69px;
+  color: #000000;
+}
+img.perfil{
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+h5.nombre{
+  font-size: 18px;
+  margin-top: 10px;
+}
+div.center{
+  text-align: center;
+}
+h5.subtitulo{
+  font-size: 16px;
+  margin-top: 10px;
+}
