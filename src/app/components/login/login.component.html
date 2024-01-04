@@ -1,0 +1,31 @@
+<body>
+  <div class="contenedor-centro">
+    <table class="login" >
+    <tr>
+      <th>
+        <br>
+        <img class="logoDesarrollo" src="assets\Design\logo-Desarrollo-Humano.png" alt=""><br>
+        <h2>Portal de Autogestión</h2>
+        <img class="user" src="assets\Design\usuario.png"><br>
+<br>
+          <form (submit)="signIn()">
+          <i class="fa fa-envelope-o"><img class="icon" src="assets\Design\iniciar-sesion.png"></i>
+          <input type="text" [(ngModel)]="user.codigo_colaborador" name="codigo_colaborador" placeholder="Código de Colaborador:" required autofocus />
+        <br><br>
+        <div class="input">
+          <i class="fa fa-envelope-o"><img class="icon" src="assets\Design\candado.png"></i>
+          <input type="password"  [(ngModel)]="user.contrasena" name="contrasena" placeholder="Contraseña:" required />
+        </div>
+        <br>
+        <button class="btn primary btn-block" type="submit">Ingresar</button>
+        <br><br>
+     </form>
+      </th>
+    </tr>
+  </table>
+  </div>  
+
+  <footer>
+  <img src="assets/Design/footer.jpg" alt="" width="100%">
+  </footer>
+</body>

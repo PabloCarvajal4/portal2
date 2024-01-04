@@ -1,0 +1,126 @@
+@media only screen and (min-width: 1700px) {
+  .contenedor-centro {
+    min-height: 70vh !important;
+  }
+
+ table.login{
+  width: 30% !important;
+ }
+
+  img.logoDesarrollo{
+    width: 100% !important;
+  }
+
+  h2{
+    font-size: 30px !important;
+  }
+
+  img.user{
+    width: 20% !important;
+    height: 20% !important;
+  }
+
+  img.icon{
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  input {
+    font-size: 20px !important;
+    padding: 10px 10px 10px 5px;
+    -webkit-appearance: none;
+    background: #ffffff;
+    color: #000000;
+    width: 35% !important;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #005395;
+  }
+
+  .btn-block{
+    margin-top: 3% !important;
+    width: 50% !important;
+    font-size: 24px !important;
+    height: 20% !important;
+  }
+}
+
+table.login {
+  display: grid;
+  height: auto;
+  width: 27%; 
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.2); 
+  border: 1px solid #ccc; 
+  border-radius: 10px;
+}
+
+table {
+  text-align: center;
+  border-color: #005395;
+}
+
+h2{
+  font-size: 18px;
+  color: #005395;
+  line-height: 0.5;
+}
+
+img.logoDesarrollo{
+  height: 100%; 
+  width: 100%;
+}
+
+img.user{
+  width: 25%;
+  height: 25%;
+}
+
+img.icon{
+  width: 20px;
+  height: 20px;
+}
+input {
+  font-size: 12px;
+  padding: 1% 1% 1% 1%;
+  -webkit-appearance: none;
+  background: #ffffff;
+  color: #000000;
+  width: 45%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #005395;
+}
+
+.btn-block{
+  width: 50%;
+  display: block;
+  margin-bottom: 5px;
+}
+.btn {
+  border: none; 
+  color: white; 
+  cursor: pointer; 
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 15px; 
+  
+}
+.primary {background-color: #005395;} 
+.primary:hover {background: #004b88; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+
+.contenedor-centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 77vh;
+}
+
+footer{
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}

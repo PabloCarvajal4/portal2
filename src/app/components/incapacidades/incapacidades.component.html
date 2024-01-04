@@ -1,0 +1,184 @@
+<body>
+    <div>
+    <ul class="menu" *ngIf="documentoSubido"><br><br>
+        <li class="centrar"><img class="perfil" [src]="documentoSubido" onerror="this.src='assets\\Design\\usuario-3.png'" alt="" width="128" height="128"></li>
+        <li><h5 class="nombre">
+            <div *ngIf="colaboradorSeleccionado">
+                {{ colaboradorSeleccionado.nombre }}
+              </div>           
+            </h5></li>
+        <li><h5 class="subtitulo">{{colaboradorSeleccionado.departamento}}<br>{{colaboradorSeleccionado.descriP_CENTRO_COSTO}}</h5></li>
+<div *ngIf="!colaboradorSeleccionado">
+                <p>Colaborador no encontrado.</p>
+              </div><br>
+              <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home', colaboradorSeleccionado.nO_EMPLE]" *ngIf="!esAdmin"> <img class="icon" src="assets\Design\work-from-home.png" >&nbsp;Página Principal</a></h6>
+            </li>
+            <li class="menu"  *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home-admin', colaboradorSeleccionado.nO_EMPLE]" *ngIf="esAdmin"><img class="icon" src="assets\Design\work-from-home.png">&nbsp;Página Principal</a></h6>
+            </li>
+            <li class="menu">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home-ddhh', colaboradorSeleccionado.nO_EMPLE]" *ngIf="depto"> <img class="icon" src="assets\Design\work-from-home.png" >&nbsp;Página Principal</a></h6>
+            </li>
+            <li class="menu">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/comprobante-pago', colaboradorSeleccionado.nO_EMPLE]"> <img  class="icon" src="assets\Design\comprobacion.png">&nbsp;Comprobante de Pago</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled">
+                <a href="#consultas" data-bs-toggle="collapse" class="nav-link">
+                  <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buscar.png">&nbsp;Consultas &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+                </a>
+                  <ul class="nav collapse ms-4" id="consultas" data-bs-parent="#menu">
+                    <li class="menu nav-item">
+                      <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Consulta de Solicitudes</a></h6>
+                  </li>
+                    <li class="menu nav-item">
+                      <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Consulta de Vacaciones</a></h6>
+                  </li>
+                  </ul>
+              </li>
+              <li class="menu nav-item my-1 disabled">
+                <a href="#solicitudes" data-bs-toggle="collapse" class="nav-link">
+                  <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\aprobacion.png">&nbsp;Solicitudes &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+                </a>
+                  <ul class="nav collapse ms-4" id="solicitudes" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-permisos', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitud de Permisos</a></h6>
+                </li>
+                <li class="menu nav-item">
+                  <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitud de Vacaciones</a></h6>
+              </li>
+              <li class="menu nav-item" *ngIf="depto">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Solicitudes Resueltas</a></h6>
+            </li>
+                  </ul>
+              </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\resfriado.png">&nbsp;Incapacidades</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#incapacidades" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buscar.png">&nbsp;Incapacidades &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="incapacidades" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Registrar Incapacidad</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades-registradas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Ver Incapacidades Registradas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\papel.png">&nbsp;Constancias</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#constancias" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\papel.png">&nbsp;Constancias &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="constancias" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Generar Constancia</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias-generadas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Constancias Generadas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu" *ngIf="esAdmin && depto">
+              <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+          </li>
+          <li class="menu" *ngIf="depto && !esAdmin">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+        </li>
+        <li class="menu" *ngIf="!depto && esAdmin">
+          <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+      </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\denunciante.png">&nbsp;Denuncia Codigo de Ética o Acoso</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#denuncias" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buscar.png">&nbsp;Denuncia Código de Ética o Acoso &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="denuncias" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncia', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Registrar Denuncia</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncias-registradas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Ver Denuncias Registradas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#sugerencias" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="assets\Design\buzon.png">&nbsp;Buzón de Sugerencias &nbsp;<img height="15px" width="15px" class="margen" src="assets\Design\flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="sugerencias" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Registrar Sugerencia</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/sugerencias-recibidas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="assets\Design\barra-de-puntos.png" alt="">&nbsp;Ver Sugerencias Registradas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\buzon.png">&nbsp;Buzón de Sugerencias</a></h6>
+            </li>
+            <li class="menu" *ngIf="depto">
+              <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/dashboards', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="assets\Design\panel.png">&nbsp;Dashboard Analítica</a></h6>
+          </li>
+      </ul>
+    </div>
+<br>
+    <div class="formulario">
+      <form (submit)="onSubmit()">
+        <h1 style="font-family: 'Merriweather', serif;">Incapacidades</h1>
+<br>
+<div class="form" *ngIf="colaboradorSeleccionado">
+  <label style="font-family: 'Merriweather', serif; font-size: 14px;" class="colaborador">Colaborador: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input class="form-control name" value="{{ colaboradorSeleccionado.nO_EMPLE }} - {{ colaboradorSeleccionado.nombre }}" readonly>
+      <br>
+
+      <label style="font-family: 'Merriweather', serif; font-size: 14px;" class="colaborador">Infotipo: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input class="form-control password" type="text" value="2001" disabled>
+      <br>
+
+      <label style="font-family: 'Merriweather', serif; font-size: 14px;" class="colaborador" for="infotipo">Tipo de Incapacidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <select class="form-select" id="tipo_incapacidad" name="tipo_incapacidad" [(ngModel)]="model.TIPO_INCAPACIDAD" (ngModelChange)="verificarFormulario()" required>
+        <option value="Incapacidad SME">Incapacidad SME</option>
+        <option value="Incapacidad IHSS">Incapacidad IHSS</option>
+        <option value="Incapacidad CP">Incapacidad CP</option>
+        <option value="Incapacidad Pre Natal">Incapacidad Pre Natal</option>
+        <option value="Incapacidad Post Natal">Incapacidad Post Natal</option>
+        <option value="Incapacidad Continua 34%">Incapacidad Continua 34%</option>
+      </select>
+      <br>
+
+      <label style="font-family: 'Merriweather', serif; font-size: 14px;" class="colaborador" for="infotipo">Fecha de Inicio de Incapacidad:&nbsp;</label>
+      <input class="form-control password" type="date" id="fecha_inicial" name="fecha_inicial" [(ngModel)]="model.FECHA_INICIO" (ngModelChange)="verificarFormulario()" required>
+      <br>
+      
+      <label style="font-family: 'Merriweather', serif; font-size: 14px;" class="colaborador" for="infotipo">Fecha de Fin de Incapacidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input class="form-control password" type="date" id="fecha_final" name="fecha_final" [(ngModel)]="model.FECHA_FINAL" (ngModelChange)="verificarFormulario()" required>
+      <br>
+
+      <label style="font-family: 'Merriweather', serif; font-size: 14px;" class="">Diagnóstico de <br/>Enfermedad según <br/>Incapacidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <textarea class="form-control" id="diagnostico" name="diagnostico" [(ngModel)]="model.DIAGNOSTICO" (ngModelChange)="verificarFormulario()" cols="40" rows="3"></textarea>
+
+      <br><br>
+
+      <label style="font-family: 'Merriweather', serif; font-size: 14px;">Documento de Incapacidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input class="form-control name" type="file" id="file" name="file" (change)="onFileSelected($event)" accept="image/jpeg, image/png" (change)="verificarFormulario()" required> 
+<br>
+
+      <button type="submit" [disabled]="!formularioCompleto">Registrar Incapacidad</button>
+      <br><br><br>
+      <div *ngIf="!formularioCompleto" class="error-message">
+        Complete todos los campos para enviar la incapacidad.
+      </div>
+    </div>
+      </form>
+    </div>
+ 
+</body>

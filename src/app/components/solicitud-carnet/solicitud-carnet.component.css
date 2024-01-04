@@ -1,0 +1,190 @@
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 28%;
+  background-color: #005395;
+  position: fixed;
+  height: 100%;
+  overflow: scroll;
+}
+
+ul.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+ul.menu::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+ul.menu::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+ul.menu::-webkit-scrollbar:horizontal {
+  height: 100%;
+}
+
+ul.menu::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: none;
+}
+
+ul.menu::-webkit-scrollbar-track {
+  border-radius: 5px;  
+}
+
+h6.menu{
+  text-align: left;
+  color:rgb(255, 255, 255);
+}
+
+img.margen{
+  margin-bottom: 1%;
+}
+/* Estilo para opciones en modo horizontal */
+#sidemenu .nav-item {
+  display: block !important;
+}
+
+/* Estilo para opciones en modo vertical */
+#sidemenu .nav-item > h6 {
+  display: block !important;
+}
+h6.margen{
+  font-size: 15px;
+}
+
+li.menu a.menu {
+  display: block;
+  color: white;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+li.menu a.active {
+  background-color: #005395;
+  color: white;
+}
+
+li.centrar{
+  text-align: center;
+  float: center;
+}
+ul.menu li a:hover {
+  color: #000000; /* Cambia el color del texto al pasar el puntero */
+}
+h1{
+  text-align: center;
+}
+h5{
+  text-align: center;
+  color:white;
+}
+
+body{
+background-color: #ffffff;
+}
+
+img.derecha{
+float: right;
+}
+img.centrar{
+float: center;
+}
+img.margen-izquierdo{
+margin-left: 57%;
+margin-top: 8%;
+}
+label{
+  float: left;
+  padding: 10px;
+}
+
+select{
+  margin-left: 1px;
+  width: 190px;
+}
+button {
+  background-color: #005395; 
+  border: none;
+  color: white;
+  padding: 3px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+  float: right;
+  margin-right: 150px; 
+}
+
+button {background-color: #005395;} 
+button:hover {background: #004b88; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+
+div.formulario{
+margin-left: 30%;
+}
+
+input.margen{
+  margin-left: 10px;
+}
+
+table.diseno{
+  float: center;
+  text-align: center;
+  background-color: white;
+  border: #b2b2b2 1px solid;
+  margin-left:auto;margin-right:auto;
+}
+td.diseño, th.diseño {
+  border: black 1px solid;
+}
+div.tabla{
+  overflow: scroll;
+  height:190px;
+  width:700px;
+  margin-left: 110px;
+}
+input.codigo{
+  width: 70px;
+}
+input.name{
+  font-size: 14px;
+  width: 200px;
+}
+input.password{
+  font-size: 14px;
+  width: 45px;
+}
+select{
+  width: 200px;
+  font-size: 14px;
+}
+input{
+  width: 200px;
+  font-size: 14px;
+}
+div.form{
+  margin-left: 5%;
+}
+button.mensaje{
+  background-color: transparent;
+  border: 0px solid;
+  margin-right: 3%;
+  background-color: #005395; 
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 15px;
+}
+img.icon{
+  height: 24px;
+  width: 24px;
+}
+img.perfil{
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}

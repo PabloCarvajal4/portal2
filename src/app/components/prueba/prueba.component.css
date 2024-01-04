@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.oval-button {
+  position: fixed;
+  right: -163px;
+  top: 13%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 50px;
+  background-color: #3498db;
+  border-radius: 25px 0 0 25px;
+  border: 2px solid #2980b9;
+  color: #ffffff;
+  text-align: left;
+  padding: 0 10px;
+  line-height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: right 0.3s ease;
+  overflow: hidden;
+
+}
+
+.oval-button:hover {
+  right: 0; 
+}
+
+.birthday-icon {
+  margin-right: 10px;
+}
+
+.oval-button p {
+  margin: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.notification-circle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.notification-circle i {
+  color: #ffffff;
+}

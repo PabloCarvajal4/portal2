@@ -1,0 +1,161 @@
+<body>
+    <div>
+    <ul class="menu" *ngIf="documentoSubido"><br>
+        <li class="centrar"><img class="perfil" [src]="documentoSubido" onerror="this.src='https://i.postimg.cc/2yPXwQQL/usuario-3.png'" alt="" width="128" height="128"></li>
+        <li><h5>
+            <div *ngIf="colaboradorSeleccionado">
+                {{ colaboradorSeleccionado.nombre }}
+              </div>           
+            </h5></li>
+        <li><h5>{{colaboradorSeleccionado.departamento}}&nbsp;&nbsp;{{colaboradorSeleccionado.descriP_CENTRO_COSTO}}</h5></li>
+<div *ngIf="!colaboradorSeleccionado">
+                <p>Colaborador no encontrado.</p>
+              </div><br>
+              <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home', colaboradorSeleccionado.nO_EMPLE]" *ngIf="!esAdmin"> <img class="icon" src="https://i.postimg.cc/JhqL7s4s/work-from-home.png" >&nbsp;Página Principal</a></h6>
+            </li>
+            <li class="menu"  *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home-admin', colaboradorSeleccionado.nO_EMPLE]" *ngIf="esAdmin"><img class="icon" src="https://i.postimg.cc/JhqL7s4s/work-from-home.png">&nbsp;Página Principal</a></h6>
+            </li>
+            <li class="menu">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/home-ddhh', colaboradorSeleccionado.nO_EMPLE]" *ngIf="depto"> <img class="icon" src="https://i.postimg.cc/JhqL7s4s/work-from-home.png" >&nbsp;Página Principal</a></h6>
+            </li>
+            <li class="menu">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/comprobante-pago', colaboradorSeleccionado.nO_EMPLE]"> <img  class="icon" src="https://i.postimg.cc/RhDTmKXC/comprobacion.png">&nbsp;Comprobante de Pago</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled">
+                <a href="#consultas" data-bs-toggle="collapse" class="nav-link">
+                  <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="https://i.postimg.cc/QCcKpVqp/buscar.png">&nbsp;Consultas &nbsp;<img height="15px" width="15px" class="margen" src="https://i.postimg.cc/zBLGJn17/flecha-hacia-abajo.png"></a></h6>
+                </a>
+                  <ul class="nav collapse ms-4" id="consultas" data-bs-parent="#menu">
+                    <li class="menu nav-item">
+                      <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Consulta de Solicitudes</a></h6>
+                  </li>
+                    <li class="menu nav-item">
+                      <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/consulta-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Consulta de Vacaciones</a></h6>
+                  </li>
+                  </ul>
+              </li>
+              <li class="menu nav-item my-1 disabled">
+                <a href="#solicitudes" data-bs-toggle="collapse" class="nav-link">
+                  <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="https://i.postimg.cc/j5ZztPZw/aprobacion.png">&nbsp;Solicitudes &nbsp;<img height="15px" width="15px" class="margen" src="https://i.postimg.cc/zBLGJn17/flecha-hacia-abajo.png"></a></h6>
+                </a>
+                  <ul class="nav collapse ms-4" id="solicitudes" data-bs-parent="#menu">
+                    <li class="menu nav-item">
+                      <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-carnet', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Solicitud de Carnet</a></h6>
+                  </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-permisos', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Solicitud de Permisos</a></h6>
+                </li>
+                <li class="menu nav-item">
+                  <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitud-vacaciones', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Solicitud de Vacaciones</a></h6>
+              </li>
+              <li class="menu nav-item" *ngIf="depto">
+                <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/solicitudes', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Solicitudes Resueltas</a></h6>
+            </li>
+                  </ul>
+              </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/cJv83C72/incapacidad-para-hablar.png">&nbsp;Incapacidades</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#incapacidades" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="https://i.postimg.cc/QCcKpVqp/buscar.png">&nbsp;Incapacidades &nbsp;<img height="15px" width="15px" class="margen" src="https://i.postimg.cc/zBLGJn17/flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="incapacidades" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Registrar Incapacidad</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/incapacidades-registradas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Ver Incapacidades Registradas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/jSwsQ79H/papel.png">&nbsp;Constancias</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#constancias" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="https://i.postimg.cc/jSwsQ79H/papel.png">&nbsp;Constancias &nbsp;<img height="15px" width="15px" class="margen" src="https://i.postimg.cc/zBLGJn17/flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="constancias" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Generar Constancia</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/constancias-generadas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Constancias Generadas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu" *ngIf="esAdmin && depto">
+              <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/7h0RZqQT/cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+          </li>
+          <li class="menu" *ngIf="depto && !esAdmin">
+            <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/7h0RZqQT/cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+        </li>
+        <li class="menu" *ngIf="!depto && esAdmin">
+          <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/aprobacion-solicitudes', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/7h0RZqQT/cheque.png">&nbsp;Aprobación de Solicitudes</a></h6>
+      </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/jjJgqs1Q/corporativo.png">&nbsp;Denuncia Codigo de Ética o Acoso</a></h6>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#denuncias" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="https://i.postimg.cc/QCcKpVqp/buscar.png">&nbsp;Denuncia Código de Ética o Acoso &nbsp;<img height="15px" width="15px" class="margen" src="https://i.postimg.cc/zBLGJn17/flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="denuncias" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncia', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Registrar Denuncia</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/denuncias-registradas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Ver Denuncias Registradas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu nav-item my-1 disabled" *ngIf="depto">
+              <a href="#sugerencias" data-bs-toggle="collapse" class="nav-link">
+                <h6 class="menu"><a class="nav-link active menu" aria-current="page"> <img class="icon" src="https://i.postimg.cc/J4FJKjTK/buzon.png">&nbsp;Buzón de Sugerencias &nbsp;<img height="15px" width="15px" class="margen" src="https://i.postimg.cc/zBLGJn17/flecha-hacia-abajo.png"></a></h6>
+              </a>
+                <ul class="nav collapse ms-4" id="sugerencias" data-bs-parent="#menu">
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Registrar Sugerencia</a></h6>
+                </li>
+                  <li class="menu nav-item">
+                    <h6 class="margen"><a class="nav-link active menu" aria-current="page" [routerLink]="['/sugerencias-recibidas', colaboradorSeleccionado.nO_EMPLE]"><img height="15px" width="15px" class="margen" src="https://i.postimg.cc/grFkmP14/barra-de-puntos.png" alt="">&nbsp;Ver Sugerencias Registradas</a></h6>
+                </li>
+                </ul>
+            </li>
+            <li class="menu" *ngIf="!depto">
+                <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/buzon-sugerencia', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/J4FJKjTK/buzon.png">&nbsp;Buzón de Sugerencias</a></h6>
+            </li>
+            <li class="menu" *ngIf="depto">
+              <h6><a class="nav-link active menu" aria-current="page" [routerLink]="['/dashboards', colaboradorSeleccionado.nO_EMPLE]"> <img class="icon" src="https://i.postimg.cc/MGRjKjP5/panel.png">&nbsp;Dashboard Analítica</a></h6>
+          </li>
+      </ul>
+    </div>
+<br>
+    <div class="formulario">
+        <form  [formGroup]="solicitudForm" (ngSubmit)="agregarSolicitud()">
+        <h1><em>Solicitar Carnet</em></h1><br><br>
+
+        <div class="form" *ngIf="colaboradorSeleccionado">
+        <label class="colaborador">Colaborador:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="password" id="colaboradorSeleccionado" value="{{ colaboradorSeleccionado.nO_EMPLE }}"  type="text" disabled>&nbsp;&nbsp;
+        <input class="name" value="{{ colaboradorSeleccionado.nombre }}" disabled>
+            <br><br>
+
+            <label class="colaborador">Motivo de Sustitución:</label>
+            <select formControlName="descripcion">
+                <option value="Extravío">Extravío</option>
+                <option value="Mal Estado">Mal Estado</option>
+                <option value="Cambio de Puesto">Cambio de Puesto</option>
+            </select>
+            <br><br>
+
+            <button type="submit" [disabled]="solicitudForm.invalid">Solicitar Carnet</button>
+            
+            </div>    
+        </form>
+    </div>
+
+</body>
